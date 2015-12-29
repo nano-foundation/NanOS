@@ -16,3 +16,7 @@ Makes a bootable ISO image using `NanOS.bin` file and __GRUB__ boot loader.
 boots NanOS using QEMU.
 4. clean :
 removes object files from working directory.
+
+## Resources
+* [OSDev](http://osdev.org)
+* [ChikenOS](http://sourceforge.net/p/chikenos)
