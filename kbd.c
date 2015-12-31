@@ -1,6 +1,6 @@
 #include "common.h"
 #include "kbd.h"
-#include "terminal.h" //Not developed yet
+#include "terminal.h" 
 
 char buffer;
 int address = -1;
