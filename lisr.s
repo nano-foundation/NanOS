@@ -31,6 +31,8 @@ global isr29
 global isr30
 global isr31
 
+
+
 isr0:
     cli
     push byte 0
@@ -219,6 +221,8 @@ isr31:
     push byte 0
     push byte 31
     jmp isr_common_stub
+
+extern fault_handler
 
 isr_common_stub:
     pusha
