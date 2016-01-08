@@ -1,5 +1,5 @@
 CC = i686-elf-gcc
-CFLAGS= -Wall -Werror -nostdlib -nostdinc -fno-builtin -fno-stack-protector
+CFLAGS=  -nostdlib -nostdinc -fno-builtin -fno-stack-protector
 LDFLAGS=-Tlink.ld
 ASFLAGS=-felf
 
