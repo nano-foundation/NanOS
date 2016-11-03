@@ -1,5 +1,5 @@
-CC = i686-elf-gcc
-CFLAGS=  -nostdlib -nostdinc -fno-builtin -fno-stack-protector
+CC = gcc
+CFLAGS=  -nostdlib -nostdinc -fno-builtin -fno-stack-protector -lm -c
 LDFLAGS=-Tlink.ld
 ASFLAGS=-felf
 
@@ -8,7 +8,7 @@ SOURCES = boot.o main.o terminal.o common.o gdt.o lgdt.o idt.o lidt.o lisr.o isr
 all: $(SOURCES) link
 
 link:
-	i686-elf-ld $(LDFLAGS) *.o -o NanOS.bin $(SOURCES)
+	ld $(LDFLAGS) *.o -o NanOS.bin $(SOURCES)
 
 .s.o:
 	nasm $(ASFLAGS) $<
