@@ -7,6 +7,9 @@ SOURCES = boot.o main.o terminal.o common.o gdt.o lgdt.o idt.o lidt.o lisr.o isr
 
 all: $(SOURCES) link
 
+c.o:
+	$(CC) $< $(CFLAGS)
+
 link:
 	ld $(LDFLAGS) *.o -o NanOS.bin $(SOURCES)
 
